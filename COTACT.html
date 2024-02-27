@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - V.T.BHARGAV PORTFOLIO</title>
+    
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4pEVlUp1B92gxzxoJnA2Hfp5d6OE7trWiPfAbVZLNTA&s">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Background color for the body */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#CONTACT {
+    padding: 20px;
+}
+
+article {
+    background-color: #fff; /* Background color for the contact section */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the contact section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.button-link {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-link:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+/* Your existing CSS styles */
+
+.message-block {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+@media only screen and (max-width: 600px) {
+            section {
+                padding: 10px;
+            }
+        }
+        .fa-envelope{
+            color: red;
+            size: 10px;
+        }
+        .fa-instagram{
+            color: rgb(255, 5, 97);
+            size: 10px;
+        }
+        .fa-linkedin{
+            color : skyblue;
+            size: 10px;
+        }
+        .fa-github{
+            color:black;
+            size: 10px;
+        }
+
+
+</style>
+
+<body>
+    <section id="CONTACT">
+        <article>
+            <p>Feel free to contact me via email or with social media platforms. I am always open to collaboration and new opportunities.</p>
+            <ul>
+                <li>Email: <a href="mailto:vallamkondabhargav@gmail.com" class="button-link">vallamkondabhargav@gmail.com   <i class="fa-solid fa-envelope"></i></a></li>
+                <li>PHONE NUMBER: +91 8074588232</li>
+                <li>INSTAGRAM-ID: <a href="https://www.instagram.com/nani_captainbhargav/" class="button-link" target="_blank">Instagram   <i class="fa-brands fa-instagram"></i></a></li>
+                <li>LINKEDIN: <a href="https://www.linkedin.com/in/v-t-bhargav-64bb51214/" class="button-link" target="_blank">LINKEDIN    <i class="fa-brands fa-linkedin"></i></a></li>
+                <li>GITHUB: <a href="https://github.com/bhargavnanicaptain" class="button-link" target="_blank">GITHUB    <i class="fa-brands fa-github"></i></a></li>
+            </ul>
+
+            <!-- Message/Feedback Block -->
+            <div class="message-block">
+                <h2>Leave a Message</h2>
+                <textarea id="userMessage" rows="4" placeholder="Type your message here..."></textarea>
+                <button id="sendMessage" onclick="sendMessage()">Send Message</button>
+            </div>
+        </article>
+    </section>
+
+    <!-- Include your JavaScript file -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".button-link");
+    
+            links.forEach(link => {
+                link.addEventListener("mouseover", function () {
+                    this.style.color = "#ff6600"; /* Change color on mouseover */
+                });
+    
+                link.addEventListener("mouseout", function () {
+                    this.style.color = "#007bff"; /* Change color back on mouseout */
+                });
+            });
+        });
+
+        // Function to send message and store it in local storage
+        function sendMessage() {
+            const userMessage = document.getElementById("userMessage").value.trim();
+            if (userMessage !== "") {
+                // Store message in local storage
+                localStorage.setItem("userMessage", userMessage);
+                console.log("Message saved to local storage:", userMessage);
+                alert("Message sent successfully:\n" + userMessage);
+            } else {
+                alert("Please enter a message before sending.");
+            }
+        }
+
+        // Retrieve message from local storage on page load
+        window.addEventListener("load", function () {
+            const storedMessage = localStorage.getItem("userMessage");
+            if (storedMessage) {
+                console.log("Message retrieved from local storage:", storedMessage);
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
