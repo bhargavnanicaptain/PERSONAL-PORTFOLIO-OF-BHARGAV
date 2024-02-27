@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.T.BHARGAV-PORTFOLIO</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4pEVlUp1B92gxzxoJnA2Hfp5d6OE7trWiPfAbVZLNTA&s">
+    <link rel="canonical" href=" https://portfolioof.netlify.app/">
+    <meta name="description" content="Welcome to my personal portfolio! Explore a curated collection of my work samples, achievements, and educational background. I aim to demonstrate my capabilities and attract potential employers or clients by showcasing my skills and accomplishments.">
+
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+section {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 10px;
+    position: center; /* Adjusted position */
+    width: 100%;
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 10px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a {
+        font-size: 4em;
+        text-decoration: none;
+        letter-spacing: 2px;
+        line-height: 1em;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    }
+
+    ul li a::before {
+        content: attr(data-text);
+        position: absolute;
+        color: var(--clr);
+        width: 0;
+        overflow: hidden;
+        transition: 1s;
+        border-radius: 8px solid var(--clr);
+        -webkit-text-stroke: 1px var(--clr);
+    }
+
+    ul li a:hover::before {
+        width: 100%;
+        filter: drop-shadow(0 0 25px var(--clr));
+    }
+}
+
+</style>
+<body>
+    <section id="home">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://videocdn.cdnpk.net/joy/content/video/free/video0484/large_preview/_import_61a46786355276.77481008.mp4?filename=1118289_macro_lens_defocused_3840x2160.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <nav>
+            <ul>
+               
+                <li style="--clr:#00ade1">
+                    <a href="ABOUT.html" data-text="&nbsp;About" target="_blank">&nbsp;ABOUT&nbsp;</a>
+                </li>
+                <li style="--clr:#ff6492">
+                    <a href="PROJECTS.html" data-text="&nbsp;PROJECTS" target="_blank">&nbsp;PROJECTS&nbsp;</a>
+                </li>
+                <li style="--clr:#ffdd1c">
+                    <a href="RESUME.html"  data-text="&nbsp;RESUME"   target="_blank">&nbsp;RESUME&nbsp;</a>
+                </li>
+                <li style="--clr:#dc00d4">
+                    <a href="COTACT.html" data-text="&nbsp;CONTACT" target="_blank">&nbsp;CONTACT&nbsp;</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>V.T.BHARGAV</h1>
+            <p>Digital Engineer Trainee (DET) at Sonata Software Company</p>
+        </header>
+        
+        
+        <!-- Additional section for content -->
+        <section>
+            <h1 style="color: white; stroke: black;"><b>WELCOME TO MY PERSONAL PORTFOLIO </b> </h1>
+        </section>
+    </section>
+
+    <section id="about">
+        <!-- About content goes here -->
+    </section>
+
+    <!-- Repeat the structure for other sections -->
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <p>&copy; 2024 V.T.BHARGAV. All <a href="Copyrights.html" target="_blank"> rights</a> reserved. Designed and developed by V.T.BHARGAV ❤️</p>
+</footer>
+
+</body>
+</html>
